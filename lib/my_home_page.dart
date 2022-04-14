@@ -12,9 +12,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   void addNewTask(Color userColor, String userText) {
     final newTask =
-        Task(id: 1, color: userColor, isChecked: true, title: userText);
+    Task(id: 1, color: userColor, isChecked: true, title: userText);
     setState(() {
       task_list.add(newTask);
     });
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           TaskList(),
-          UserInput(),
+          UserInput(addTask: addNewTask),
         ],
       ),
     );

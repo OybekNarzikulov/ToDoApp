@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'models/task.dart';
 
 class UserInput extends StatefulWidget {
-  // final Function addTask;
-  //
-  // UserInput({this.addTask});
+  final Function addTask;
+
+  UserInput({required this.addTask});
 
   @override
   State<UserInput> createState() => _UserInputeState();
@@ -16,6 +16,7 @@ class _UserInputeState extends State<UserInput> {
   final _textController = TextEditingController();
 
   String userText = '';
+  int colorIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,19 @@ class _UserInputeState extends State<UserInput> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ...color_list.map((e) => GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      if(e.index == 0){
+                        colorIndex = 0;
+                      } else if(e.index == 1){
+                        colorIndex = 1;
+                      } else if(e.index == 1){
+                        colorIndex = 2;
+                      } else if(e.index == 1){
+                        colorIndex = 3;
+                      } else if(e.index == 1){
+                        colorIndex = 4;
+                      }
+                    },
                     child: Container(
                       margin: EdgeInsets.symmetric(vertical: 20),
                       height: 40,
@@ -66,7 +79,7 @@ class _UserInputeState extends State<UserInput> {
                   ),
                   width: 70,
                   child: GestureDetector(
-                    onTap: (){},
+                    onTap: () => widget.addTask(userText, colorIndex),
                     child: SizedBox(height: 50,child: Icon(Icons.add)),
                   ),
                 ),

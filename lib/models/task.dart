@@ -31,8 +31,6 @@ List<CircleColor> color_list = [
 ];
 
 List<Task> task_list = [
-  Task(id: 0, color: Colors.green, title: 'Me', isChecked: true),
-  Task(id: 1, color: Colors.green, title: 'Akhmadjon Sanakulov', isChecked: true),
   Task(id: 2, color: Colors.red, title: 'Nastya', isChecked: true),
   Task(id: 3, color: Colors.yellow, title: 'yesterday you said tomorrow', isChecked: true),
   Task(id: 4, color: Colors.blue, title: 'Mike', isChecked: true),
@@ -40,8 +38,6 @@ List<Task> task_list = [
   Task(id: 6, color: Colors.green, title: 'Adam', isChecked: true),
   Task(id: 7, color: Colors.green, title: 'Ron', isChecked: true),
   Task(id: 8, color: Colors.green, title: 'Gabriella', isChecked: true),
-  Task(id: 0, color: Colors.green, title: 'Me', isChecked: true),
-  Task(id: 1, color: Colors.green, title: 'Akhmadjon Sanakulov', isChecked: true),
   Task(id: 2, color: Colors.red, title: 'Nastya', isChecked: true),
   Task(id: 3, color: Colors.yellow, title: 'yesterday you said tomorrow', isChecked: true),
   Task(id: 4, color: Colors.blue, title: 'Mike', isChecked: true),
